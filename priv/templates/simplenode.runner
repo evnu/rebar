@@ -172,9 +172,7 @@ elif [ "$RUNNER_SCRIPT_DATA" = "slim" ]; then
     unset SYSTEM_ERL_PATH
     unset SYSTEM_HOME_BIN
 
-    LOCAL_ERTS_PATH=$RUNNER_BASE_DIR/erts-$ERTS_VSN/bin
     NODETOOL="$ERTS_PATH/escript $RUNNER_BASE_DIR/releases/$APP_VSN/nodetool $NAME_ARG $COOKIE_ARG"
-    unset LOCAL_ERL_PATH
 
     # Setup additional arguments for slim release
     SLIM_ARGS="-boot_var RELTOOL_EXT_LIB $RUNNER_BASE_DIR/lib -sasl releases_dir \"$RUNNER_BASE_DIR/releases\""
