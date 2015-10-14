@@ -151,7 +151,8 @@ process_args([Arg | Rest], Acc, Opts) ->
 
 
 start_epmd() ->
-    [] = os:cmd(epmd_path() ++ " -daemon"),
+    %% NOTE: we escape epmd_path() with \" to handle whitespace in paths.
+    [] = os:cmd("\"" ++ epmd_path() ++ "\"" ++ " -daemon"),
     ok.
 
 epmd_path() ->
