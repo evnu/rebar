@@ -1,7 +1,7 @@
 .PHONY: clean xref_warnings deps test test_eunit test_inttest
 
-REBAR=$(PWD)/rebar
-RETEST=$(PWD)/deps/retest/retest
+REBAR="$(PWD)/rebar"
+RETEST="$(PWD)/deps/retest/retest"
 LOG_LEVEL?=debug
 RT_TARGETS?=inttest
 
